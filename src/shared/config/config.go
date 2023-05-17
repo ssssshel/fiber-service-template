@@ -38,4 +38,7 @@ const (
 
 // Port
 
-var Port = os.Getenv("PORT")
+func Port() string {
+	port := os.Getenv("PORT")
+	return port
+}
