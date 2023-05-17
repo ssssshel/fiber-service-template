@@ -6,6 +6,8 @@ import (
 	"github.com/ssssshel/fiber-service-template/src/shared/interfaces"
 )
 
+// DBConnectionConfig
+
 func DBConnectionConfig() *interfaces.IDBConnConfig {
 	values := &interfaces.IDBConnConfig{
 		DB_NAME:     os.Getenv("POSTGRESQL_DB"),
@@ -19,13 +21,21 @@ func DBConnectionConfig() *interfaces.IDBConnConfig {
 	return values
 }
 
+// ATKey
+
 func ATKey() string {
 	key := os.Getenv("ACCESS_TOKEN_PRIVATE_KEY")
 	return key
 }
+
+// APIVersion
 
 type APIVersion uint
 
 const (
 	V1 APIVersion = 1
 )
+
+// Port
+
+var Port = os.Getenv("PORT")
