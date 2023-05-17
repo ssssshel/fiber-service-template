@@ -43,8 +43,8 @@ func EnvironmentsManager(app *fiber.App, env env) {
 			initEnvs()
 			defaultInitConf(app, false)
 		}
+	} else {
+		fmt.Print("Invalid environment configuration")
 	}
-
-	fmt.Print("Invalid environment configuration")
 
 }
